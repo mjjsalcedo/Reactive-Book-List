@@ -1,9 +1,9 @@
 import React from 'react';
 
-const SearchField = ({ setSearchFilter }) => (<input
-  type="text"
-  placeholder="Search..."
-  onChange={ setSearchFilter }
-  />);
+const AppTitle = ({ title }) => (
+  <ul>
+  <h3>{ title }</h3>
+  </ul>
+  );
 
-export default SearchField;
+export default AppTitle;

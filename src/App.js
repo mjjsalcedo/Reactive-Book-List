@@ -1,8 +1,9 @@
 import React from 'react';
 import Header from './components/Header';
+import AppTitle from './components/BookListAppTitle';
+import SearchField from './components/BookFilterInput';
 import NewBookForm from './containers/NewBookForm/index.js';
 import BookList from './containers/BookList/index.js';
-import SearchField from './components/BookListAppTitle';
 import { getBooksFromFakeXHR, addBookToFakeXHR } from './lib/books.db.js';
 import './containers/App/style.css';
 
@@ -52,6 +53,7 @@ class App extends React.Component {
     return (
       <div>
         <Header />
+        <AppTitle title={this.state.title}/>
         <SearchField setSearchFilter={this.setSearchFilter} />
         <BookList
           books={this.state.books}
