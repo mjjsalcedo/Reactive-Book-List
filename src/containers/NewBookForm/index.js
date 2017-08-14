@@ -32,7 +32,7 @@ class NewBookForm extends React.Component {
             title : this.state.newTitle,
             author : this.state.newAuthor
           });
-          // @TODO clear the input field
+
           this.setState({
             newTitle : '',
             newAuthor : ''

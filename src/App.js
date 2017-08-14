@@ -22,15 +22,11 @@ class App extends React.Component {
   }
 
   setSearchFilter(event) {
-    console.log(event.target.value);
     const searchFilter = event.target.value;
-    this.setState({ searchFilter });
+    this.setState({ searchFilter: searchFilter });
   }
 
-  // send this down to my child
   parentAddBook(newBook) {
-    const books = this.state.books;
-
     addBookToFakeXHR(newBook)
     .then(books => {
       this.setState({
@@ -49,7 +45,6 @@ class App extends React.Component {
   }
 
   render() {
-    console.log(this.state.books)
     return (
       <div>
         <Header />
