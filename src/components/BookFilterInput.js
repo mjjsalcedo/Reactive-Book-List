@@ -1,8 +1,8 @@
 import React from 'react';
 
-var SearchFilterInput = ({ setSearchFilter }) => (
+var BookFilterInput = ({ setSearchFilter }) => (
 
   <input type ="text" placeholder="search..." onChange={ setSearchFilter }/>
 )
 
-export default SearchFilterInput;
+export default BookFilterInput;

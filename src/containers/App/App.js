@@ -3,7 +3,7 @@ import Header from '../../components/Header.js';
 import AppTitle from '../../components/BookListAppTitle.js';
 import {getBooksFromFakeXHR, addBookToFakeXHR} from '../../lib/books.db.js'
 import BookList from '../BookList/index.js'
-import SearchFilterInput from '../../components/BookFilterInput.js';
+import BookFilterInput from '../../components/BookFilterInput.js';
 
 class App extends Component {
 
@@ -22,7 +22,7 @@ class App extends Component {
 
   searchFilterInput(event){
     var searchFilter = event.target.value
-    this.setState = {searchFilter}
+    this.setState({searchFilter})
   }
 
   componentDidMount() {
@@ -39,7 +39,7 @@ class App extends Component {
       <div className="App">
       <Header />
       <AppTitle title= {this.state.title}/>
-      <SearchFilterInput setSearchFilter={ this.setSearchFilter }/>
+      <BookFilterInput setSearchFilter={ this.searchFilterInput }/>
       <BookList books={this.state.books} searchFilter={this.state.searchFilter} />
       </div>
       );
