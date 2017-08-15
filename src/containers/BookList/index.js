@@ -1,8 +1,12 @@
 import React from 'react';
-import Books from '../../components/Book.js';
+import Book from '../../components/Book.js';
 
-var BookList = () => (
-
+var BookList = ({books}) => (
+<ul>
+          { books.map( book =>
+            <Book title={book.title} author={book.author} />
+          )}
+        </ul>
 )
 
 

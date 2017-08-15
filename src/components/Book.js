@@ -1,10 +1,10 @@
 import React from 'react';
 
-var Books = ({title, author}) => (
+var Book = ({title, author}) => (
   <ul>
   <li> {title} </li>
-  <li> {author} </li>
+  <p> {author} </p>
   </ul>
   )
 
-  export default Books;
+  export default Book;
