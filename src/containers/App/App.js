@@ -16,7 +16,7 @@ class App extends Component {
       searchFilter: ''
     };
 
-  this.searchFilterInput = this.searchFilterInput.bind(this)
+    this.searchFilterInput = this.searchFilterInput.bind(this)
   }
 
 
@@ -39,7 +39,8 @@ class App extends Component {
       <div className="App">
       <Header />
       <AppTitle title= {this.state.title}/>
-      <BookList books={this.state.books} />
+      <SearchFilterInput setSearchFilter={ this.setSearchFilter }/>
+      <BookList books={this.state.books} searchFilter={this.state.searchFilter} />
       </div>
       );
   }

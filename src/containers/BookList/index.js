@@ -1,7 +1,7 @@
 import React from 'react';
 import Book from '../../components/Book.js';
 
-var BookList = ({books}) => (
+var BookList = ({books, searchFilterInput}) => (
 <ul>
           { books.map( book =>
             <Book title={book.title} author={book.author} />
