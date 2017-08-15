@@ -1,7 +1,10 @@
 import React from 'react';
 
-var Books = () => (
+var Books = ({title, author}) => (
+  <ul>
+  <li> {title} </li>
+  <li> {author} </li>
+  </ul>
+  )
 
-)
-
-export default Books;
+  export default Books;
